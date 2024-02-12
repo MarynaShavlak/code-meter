@@ -24,7 +24,7 @@ function showQuestions(index) {
   title.innerHTML = `${questions[index].question}`;
   list.innerHTML = ``;
   questions[index].options.forEach(item => {
-    const text = `<li class='quiz__option ' data-id='A'>${item}</li>`;
+    const text = `<li class='quiz__option ']>${item}</li>`;
     list.insertAdjacentHTML('beforeend', text);
   });
   const options = list.querySelectorAll('.quiz__option');
@@ -68,7 +68,7 @@ function nextQuestion() {
   if (count + 1 == questions.length && option.classList.contains('disabled')) {
     result.classList.remove('hidden');
     quiz.classList.add('hidden');
-    resultText.innerHTML = `${score}`;
+    resultText.innerHTML = `Кількість правильних відповідей ${score} із ${questions.length}`;
     return;
   }
   if (option.classList.contains('disabled')) {

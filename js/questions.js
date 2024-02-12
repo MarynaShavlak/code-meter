@@ -1,38 +1,60 @@
 const questions = [
   {
-    question: 'Яке значення забороняє виділяти текст?',
-    answer: 'user-select: none',
+    question: 'Чому дорівнює сума [] + 1 + 2?',
+    answer: '12',
+    options: ['1', 'NaN', 'undefined', '12', 'Інше'],
+  },
+  {
+    question: 'Що таке ECMAScript?',
+    answer: 'Специфікація мови Javascript',
     options: [
-      'no-select: none',
-      'pointer-select: none',
-      'user-select: unset',
-      'user-select: none',
+      'Нова мова програмування',
+      'Перероблена реалізація Javascript',
+      'Специфікація мови Javascript',
     ],
   },
   {
-    question:
-      'Який атрибут HTML5 вказує, що елемент недоступний для редагування?',
-    answer: 'readonly',
-    options: ['disabled', 'readonly', 'required', 'tabindex'],
+    question: 'Яким буде результат операції true + false?',
+    answer: '1',
+    options: ['"truefalse"', '0', '1', 'NaN'],
   },
   {
-    question: 'Який із наступних атрибутів новий в HTML5?',
-    answer: 'checked',
-    options: ['autofocus', 'placeholder', 'required', 'checked'],
+    question: `Що покаже цей код? alert( 20e-1['toString'](2) )?`,
+    answer: '10',
+    options: ['2', '10', '20', 'NaN', 'Помилка у коді'],
   },
   {
-    question: 'Значенням атрибуту border може бути:',
-    answer: '2',
-    options: ['top', 'left', '2', 'green'],
-  },
-  {
-    question: "Для чого потрібен атрибут autocomplete='off'?",
-    answer: 'откл автозаповнення',
+    question: 'Виклик setInterval(func, 100) викликає func…?',
+    answer:
+      'Зазвичай кожні 100мс, але можливо, що виклики відбуватимуться набагато рідше',
     options: [
-      'откл автозаповнення',
-      'вкл автозаповнення',
-      'робить input обовязковим для заповнення',
-      'скриває input',
+      'Рівно кожні 100мс.',
+      'Майже кожні 100мс.',
+      'Зазвичай кожні 100мс, але можливо, що виклики відбуватимуться набагато рідше',
     ],
+  },
+  {
+    question: 'За якої умови elem.scrollHeight == elem.clientHeight?',
+    answer: 'Вміст елемента повністю видимий, у ньому немає прокручування.',
+    options: [
+      'Вміст елемента повністю прокручено вниз.',
+      'Висота елемента дорівнює висоті смуги прокручування.',
+      'Вміст елемента повністю видимий, у ньому немає прокручування.',
+      'Елемент не має padding.',
+    ],
+  },
+  {
+    question: `Результат elem.getBoundingClientRect() містить від'ємне значення top: -10. Що це означає?`,
+    answer: 'Верх елемента вилазить за верхню межу вікна.',
+    options: [
+      'Верх елемент вилазить за верхню межу документа.',
+      'Верх елемента вилазить за верхню межу вікна.',
+      'Вміст елемента прокручено на 10px.',
+    ],
+  },
+  {
+    question: 'Яке з цих ключових слів ООП не використовується у JavaScript?',
+    answer: 'instanceOf',
+    options: ['new', 'this', 'instanceOf', 'використовуються всі'],
   },
 ];
