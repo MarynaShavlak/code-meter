@@ -23,8 +23,9 @@ function showQuestions(index) {
   let progress = $('.quiz__progress-inner');
   title.innerHTML = `${questions[index].question}`;
   list.innerHTML = ``;
-  questions[index].options.forEach(item => {
-    const text = `<li class='quiz__option ' data-id='A'>${item}</li>`;
+  questions[index].options.forEach((item, i) => {
+    const dataIdLetter = String.fromCharCode(65 + i);
+    const text = `<li class='quiz__option ' data-id='${dataIdLetter}'>${item}</li>`;
     list.insertAdjacentHTML('beforeend', text);
   });
   const options = list.querySelectorAll('.quiz__option');
@@ -39,10 +40,12 @@ function optionSelect(answer) {
   const userAnwer = answer.textContent;
   const correctAnswer = questions[count].answer;
   const options = document.querySelectorAll('.quiz__option');
-  const iconCorrect = `<span>&#10004</span>`;
-  const iconIncorrect = `<span>&#9940</span>`;
+  const iconCorrect = `<i class="fa-solid fa-circle-check"></i>`;
+  const iconIncorrect = `<i class="fa-solid fa-xmark"></i>`;
   if (userAnwer === correctAnswer) {
     score += 1;
+    // const resultText = $('.result__text');
+    // resultText.innerHTML = `${score}`;
     answer.classList.add('correct');
     answer.insertAdjacentHTML('beforeend', iconCorrect);
   } else {
@@ -64,17 +67,42 @@ function nextQuestion() {
   const option = $('.quiz__option');
   const result = $('.result');
   const resultText = $('.result__text');
+  const resultTextFinal = $('.result__text-final');
 
   if (count + 1 == questions.length && option.classList.contains('disabled')) {
     result.classList.remove('hidden');
     quiz.classList.add('hidden');
-    resultText.innerHTML = `${score}`;
+    console.log('score: ', score);
+    resultTextFinal.innerHTML = `Результат: ${score}/ ${questions.length}`;
     return;
   }
   if (option.classList.contains('disabled')) {
+    resultText.innerHTML = `${score}`;
     count++;
     showQuestions(count);
   } else {
-    alert('Choose one answer variant before going to next question');
+    toggleModal();
   }
+}
+
+const refs = {
+  closeModalBtn: document.querySelector('[data-modal-close]'),
+  backdrop: document.querySelector('[data-modal]'),
+  modal: document.querySelector('.modal'),
+};
+
+refs.closeModalBtn.addEventListener('click', handleModalClose);
+refs.backdrop.addEventListener('click', toggleModal);
+refs.modal.addEventListener('click', stopPropagation);
+
+function toggleModal() {
+  document.body.classList.toggle('modal-open');
+  refs.backdrop.classList.toggle('backdrop--hidden');
+}
+function handleModalClose(e) {
+  e.stopPropagation();
+  toggleModal();
+}
+function stopPropagation(e) {
+  e.stopPropagation();
 }

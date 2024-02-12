@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend-тест</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/null.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -55,7 +62,7 @@
             <img src="img/the-end.png" alt="The end" />
           </div>
           <div class="result__title">Ви пройшли тест</div>
-          <div class="result__text">
+          <div class="result__text-final">
             <!-- ..... -->
           </div>
           <div class="result__btn">
@@ -63,6 +70,17 @@
           </div>
         </div>
       </main>
+    </div>
+    <div class="backdrop backdrop--hidden" data-modal>
+      <div class="modal">
+        <p class="modal__text">
+          Виберіть варіант відповіді на питання</p>
+
+          <button type="button" class="modal__btn-close" data-modal-close>
+            <i class="fa-solid fa-xmark close-modal"></i>
+          </button>
+        </p>
+      </div>
     </div>
     <script src="/js/questions.js"></script>
     <script src="./index.js"></script>
