@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <canvas class="hidden"></canvas>
     <div class="wrapper">
+        
       <main class="main">
         <!-- Попередження -->
         <div class="warning hidden">
@@ -52,15 +54,13 @@
             </ul>
           </div>
           <div class="quiz__footer">
-            <button class="quiz__next-btn">Наступний</button>
+            <button class="quiz__next-btn">Далі</button>
           </div>
         </div>
 
         <!-- Результати тесту -->
         <div class="result hidden">
-          <div class="result__img">
-            <img src="img/the-end.png" alt="The end" />
-          </div>
+            
           <div class="result__title">Ви пройшли тест</div>
           <div class="result__text-final">
             <!-- ..... -->
@@ -83,6 +83,7 @@
       </div>
     </div>
     <script src="/js/questions.js"></script>
+    <script src="./canvas.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

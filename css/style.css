@@ -3,6 +3,7 @@
 
 body {
   background: #f8efef;
+  position: relative;
 }
 body.modal-open {
   overflow: hidden;
@@ -80,7 +81,7 @@ body.modal-open {
 }
 
 .quiz__title {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 600;
 }
 
@@ -168,24 +169,29 @@ body.modal-open {
   border: 1px solid #f8efef;
   margin-left: auto;
 }
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  pointer-events: all;
+}
+
+canvas.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .result {
-  max-width: 450px;
-  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  height: 200px;
   background-color: white;
   border-radius: 10px;
-  padding: 20px 10px;
-}
-
-.result__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.result__img img {
-  max-width: 200px;
-  width: 100%;
+  padding: 20px;
 }
 
 .result__title {
@@ -207,6 +213,7 @@ body.modal-open {
   text-align: center;
   color: #cd8c8b;
   margin: 30px 0;
+  z-index: 2;
 }
 
 .result__btn {
@@ -227,11 +234,12 @@ body.modal-open {
   border: 1px solid #f8efef;
   color: #f8efef;
   background: #cd8c8b;
+  z-index: 2;
 }
 
 .result__restart:hover {
-  color: #fff;
-  background: #f8efef;
+  color: #000;
+  background: #cd8c8b;
 }
 
 .footer {
