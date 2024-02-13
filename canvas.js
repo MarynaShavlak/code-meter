@@ -129,7 +129,7 @@ class Particle {
     this.ctx = ctx;
     this.x = x;
     this.y = y;
-    this.color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+    this.color = this.generateRandomColor();
     this.opacity = 1;
     this.gravity = 0.03;
     this.friction = 0.99;
@@ -172,6 +172,13 @@ class Particle {
 
   updateOpacity() {
     this.opacity -= 0.003;
+  }
+  generateRandomColor() {
+    const baseHue = 348;
+    const hueRange = 60;
+    const hue = (baseHue + (Math.random() * hueRange - hueRange / 2)) % 360;
+    const color = `hsl(${hue}, 50%, 50%)`;
+    return color;
   }
 }
 
