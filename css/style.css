@@ -2,8 +2,72 @@
 @import 'normalize.css';
 
 body {
-  background: #66A0E3;
   position: relative;
+  background-color: #66A0E3;
+  background-image:
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg'),
+          url('../images/code.svg');
+  background-position:
+          2% 3%,     /* Top-left area */
+          98% 5%,    /* Top-right area */
+          50% 10%,   /* Top-center area */
+          15% 20%,   /* Upper-left section */
+          80% 25%,   /* Upper-right section */
+          30% 35%,   /* Left of center */
+          65% 40%,   /* Right of center */
+          5% 50%,    /* Center-left edge */
+          95% 52%,   /* Center-right edge */
+          45% 55%,   /* Just below center */
+          20% 65%,   /* Lower-left section */
+          75% 68%,   /* Lower-right section */
+          90% 73%,   /* Bottom-right quadrant */
+          35% 76%,   /* Bottom-center-left */
+          60% 80%,   /* Bottom-center-right */
+          10% 85%,   /* Bottom-left area */
+          50% 88%,   /* Bottom-center area */
+          85% 90%,   /* Bottom-right area */
+          25% 95%,   /* Bottom-left corner */
+          70% 97%;   /* Bottom-right corner */
+  background-size:
+          100px auto,
+          120px auto,
+          90px auto,
+          140px auto,
+          110px auto,
+          80px auto,
+          130px auto,
+          95px auto,
+          115px auto,
+          150px auto,
+          85px auto,
+          125px auto,
+          105px auto,
+          135px auto,
+          90px auto,
+          120px auto,
+          100px auto,
+          80px auto,
+          145px auto,
+          110px auto;
+  background-repeat: no-repeat;
 }
 body.modal-open {
   overflow: hidden;
@@ -291,7 +355,7 @@ canvas.hidden {
 }
 
 .result__restart:hover {
-  color: #66A0E3;
+  color: #77D22D;
   background-color: #ffffff;
 }
 
