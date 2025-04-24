@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
-@import 'null.css';
+@import 'normalize.css';
 
 body {
-  background: #f8efef;
+  background: #66A0E3;
   position: relative;
 }
 body.modal-open {
@@ -23,11 +23,18 @@ body.modal-open {
   border-bottom: 2px dotted black;
 }
 
+.quiz__name {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
 }
 
 /* Предупреждение */
@@ -44,9 +51,9 @@ body.modal-open {
 .quiz {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
-  height: 600px;
-  width: 100%;
+  width: 1000px;
+  height: 1000px;
+
   border-radius: 10px;
   /* background-color: white; */
 }
@@ -64,25 +71,61 @@ body.modal-open {
 .quiz__progress {
   height: 40px;
   /* border-radius: 30px; */
-  background-color: #f8efef;
-  border: 4px solid #cd8c8b;
+  background-color: #66A0E3;
+  border: 4px solid #ffffff;
 }
 
 .quiz__progress-inner {
   height: 100%;
   width: 70%;
-  background-color: #cd8c8b;
+  background-color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
-
+.quiz__content-wrapper {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .quiz__content {
+  position: relative;
   padding: 30px 30px 20px;
   flex: 1 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  width: 800px;
+  height:400px;
+}
+.quiz__content::before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #77D22D;
+  transform: rotate(4deg) translateY(-30px) translateX(-30px);
+  z-index: -1;
+}
+
+.quiz__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #FAE719;
+  transform: rotate(-5deg) translateY(5px) ;
+  z-index: -2;
 }
 
 .quiz__title {
   font-size: 28px;
   font-weight: 600;
+  text-align: center;
 }
 
 .quiz__list {
@@ -117,12 +160,12 @@ body.modal-open {
   width: 60px;
   content: attr(data-id);
   color: #fff;
-  background-color: #cd8c8b;
+  background-color: #66A0E3;
 }
 
 .quiz__option:hover {
   color: #fff;
-  background: #cd8c8b53;
+  background: #66A0E353;
   /* border: 1px solid #b8daff; */
 }
 
@@ -146,7 +189,7 @@ body.modal-open {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid lightgrey;
+
 }
 
 .quiz__total,
@@ -156,18 +199,26 @@ body.modal-open {
   justify-content: center;
   margin-bottom: 20px;
   text-align: center;
+  color: #ffffff;
+  font-size: 24px;
 }
 
 .quiz__next-btn {
-  height: 40px;
-  padding: 0 13px;
-  font-size: 18px;
-  font-weight: 400;
+
+  padding: 15px 30px;
+  font-size: 30px;
+  font-weight: 900;
   color: #fff;
   border-radius: 5px;
-  background: #cd8c8b;
-  border: 1px solid #f8efef;
+  background: #77D22D;
+  border: 1px solid #ffffff;
   margin-left: auto;
+
+  transition: all 0.3s ease;
+  &:hover {
+    background: #fff;
+    color: #77D22D ;
+  }
 }
 canvas {
   position: absolute;
@@ -204,14 +255,14 @@ canvas.hidden {
   font-size: 50px;
   font-weight: 900;
   text-align: center;
-  color: #cd8c8b;
+  color: #ffffff;
 }
 
 .result__text-final {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
-  color: #cd8c8b;
+  color: #66A0E3;
   margin: 30px 0;
   z-index: 2;
 }
@@ -231,15 +282,15 @@ canvas.hidden {
   font-size: 18px;
   font-weight: 600;
   border-radius: 5px;
-  border: 1px solid #f8efef;
-  color: #f8efef;
-  background: #cd8c8b;
+  border: 1px solid #66A0E3;
+  color: #66A0E3;
+  background: #66A0E3;
   z-index: 2;
 }
 
 .result__restart:hover {
   color: #000;
-  background: #cd8c8b;
+  background: #66A0E3;
 }
 
 .footer {
@@ -330,11 +381,11 @@ canvas.hidden {
 
 .modal__btn-close:hover,
 .modal__btn-close:focus {
-  color: #cd8c8b;
-  border: 1px solid #cd8c8b;
+  color: #66A0E3;
+  border: 1px solid #66A0E3;
 }
 
 .modal__btn-close:hover .close-modal,
 .modal__btn-close:focus .close-modal {
-  color: #cd8c8b;
+  color: #66A0E3;
 }

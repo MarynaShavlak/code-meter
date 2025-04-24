@@ -12,21 +12,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/null.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <canvas class="hidden"></canvas>
     <div class="wrapper">
-        
+
       <main class="main">
         <!-- Попередження -->
         <div class="warning hidden">
-          В тесте немає питань, <br />заповніть та повертайтесь!
+          В тесті немає питань, <br />заповніть та повертайтесь!
         </div>
 
         <!-- Тест на skills верстальщика -->
         <div class="quiz hidden">
+          <h1 class="quiz__name" > Code Meter: JavaScript Test</h1>
           <div class="quiz__header">
             <div class="header__left">
               <div class="quiz__total">
@@ -44,15 +45,17 @@
               <div class="result__text">0</div>
             </div>
           </div>
-
-          <div class="quiz__content">
-            <h3 class="quiz__title">
-              <!-- ....-->
-            </h3>
-            <ul class="quiz__list">
-              <!-- .... -->
-            </ul>
+          <div class="quiz__content-wrapper">
+            <div class="quiz__content">
+              <h3 class="quiz__title">
+                <!-- ....-->
+              </h3>
+              <ul class="quiz__list">
+                <!-- .... -->
+              </ul>
+            </div>
           </div>
+
           <div class="quiz__footer">
             <button class="quiz__next-btn">Далі</button>
           </div>
@@ -60,7 +63,7 @@
 
         <!-- Результати тесту -->
         <div class="result hidden">
-            
+
           <div class="result__title">Ви пройшли тест</div>
           <div class="result__text-final">
             <!-- ..... -->
