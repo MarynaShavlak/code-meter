@@ -132,7 +132,7 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  padding: 30px 0px;
+  padding: 30px 0;
 }
 
 .quiz__option {
@@ -161,16 +161,17 @@ body.modal-open {
   content: attr(data-id);
   color: #fff;
   background-color: #66A0E3;
+  transition: background-color 0.3s ease;
 }
 
 .quiz__option:hover {
-  color: #fff;
-  background: #66A0E353;
-  /* border: 1px solid #b8daff; */
+
+  background-color: #FAE719;
+
 }
 
 .quiz__option.correct {
-  color: #155724;
+  color: #01C853;
   background: #d4edda;
   border: 1px solid #c3e6cb;
 }
@@ -262,7 +263,7 @@ canvas.hidden {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
-  color: #66A0E3;
+  color: #77D22D;
   margin: 30px 0;
   z-index: 2;
 }
@@ -282,15 +283,16 @@ canvas.hidden {
   font-size: 18px;
   font-weight: 600;
   border-radius: 5px;
-  border: 1px solid #66A0E3;
-  color: #66A0E3;
-  background: #66A0E3;
+  border: 1px solid #77D22D;
+  color: #ffffff;
+  background: #77D22D;
   z-index: 2;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .result__restart:hover {
-  color: #000;
-  background: #66A0E3;
+  color: #66A0E3;
+  background-color: #ffffff;
 }
 
 .footer {

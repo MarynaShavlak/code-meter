@@ -173,13 +173,21 @@ class Particle {
   updateOpacity() {
     this.opacity -= 0.003;
   }
-  generateRandomColor() {
-    const baseHue = 348;
-    const hueRange = 60;
+  // generateRandomColor() {
+  //   const baseHue = 348;
+  //   const hueRange = 60;
+  //   const hue = (baseHue + (Math.random() * hueRange - hueRange / 2)) % 360;
+  //   const color = `hsl(${hue}, 50%, 50%)`;
+  //   return color;
+  // }
+ generateRandomColor() {
+    const baseHue = 95; // green area
+    const hueRange = 10; // small range for similar shades
     const hue = (baseHue + (Math.random() * hueRange - hueRange / 2)) % 360;
-    const color = `hsl(${hue}, 50%, 50%)`;
+    const color = `hsl(${hue}, 50%, 50%)`; // matching #77D22D saturation and lightness
     return color;
   }
+
 }
 
 const fireAnimator = new FireAnimator();
